@@ -4,6 +4,27 @@ This is a Simple Token Exchange contract that allows users to exchange one token
 
 For Example, if the user has `10 tokenA` then, he can exchange it for `20 tokenB` if the exchange rate is 2.
 
+### Contract Structure
+
+The contract consists of the following main components:
+
+- IERC20 interface: Defines the standard functions for ERC20 tokens.
+- SimpleDEX contract: Implements the token exchange functionality.
+
+### State Variables
+
+- `owner`: Address of the contract owner.
+- `tokenA` and `tokenB`: IERC20 interfaces for the two tokens that can be exchanged.
+- `exchangeRate`: The fixed rate at which tokens are exchanged.
+
+### Key Functions
+
+1. `constructor(address _tokenA, address _tokenB, uint _exchangeRate)`: Initializes the contract with the addresses of the two tokens and the initial exchange rate.
+2. `setExchangeRate(uint _newRate)`: Allows the owner to update the exchange rate.
+3. `exchangeTokenAForTokenB(uint amountA)`: Exchanges Token A for Token B.
+4. `exchangeTokenBForTokenA(uint amountB)`: Exchanges Token B for Token A.
+5. `balanceOfTokenA(address account)` and `balanceOfTokenB(address account)`: View functions to check token balances.
+6. `_transferTokens(IERC20 token, address from, address to, uint amount)`: Internal function to handle token transfers safely.
 
 ### Testing
 
