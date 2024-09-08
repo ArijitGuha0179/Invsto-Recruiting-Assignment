@@ -37,8 +37,6 @@ contract SimpleDEX {
         
         uint amountB = amountA * exchangeRate;
         require(tokenB.balanceOf(address(this)) >= amountB, "Not enough tokenB liquidity in contract");
-        tokenA.approve(address(this), amountA);
-        tokenB.approve(address(this), amountB);
         _transferTokens(tokenA, msg.sender, address(this), amountA);
         _transferTokens(tokenB, address(this), msg.sender, amountB);
     }
@@ -48,8 +46,6 @@ contract SimpleDEX {
        
         uint amountA = amountB / exchangeRate; 
         require(tokenA.balanceOf(address(this)) >= amountA, "Not enough tokenA liquidity in contract");
-        tokenA.approve(address(this), amountA);
-        tokenB.approve(address(this), amountB);
         _transferTokens(tokenB, msg.sender, address(this), amountB);
         _transferTokens(tokenA, address(this), msg.sender, amountA);
     }
