@@ -1,3 +1,4 @@
+## SimpleDEX
 
 This is a Simple Token Exchange contract that allows users to exchange one token for another based on a fixed Exchange Rate.
 
