@@ -6,6 +6,8 @@ For Example, if the user has `10 tokenA` then, he can exchange it for `20 tokenB
 
 ### Contract Structure
 
+**:computer:[Code](./contracts/SimpleDEX.sol)**
+
 The contract consists of the following main components:
 
 - IERC20 interface: Defines the standard functions for ERC20 tokens.
