@@ -4,6 +4,8 @@ This is a Simple Token Exchange contract that allows users to exchange one token
 
 For Example, if the user has `10 tokenA` then, he can exchange it for `20 tokenB` if the exchange rate is 2.
 
+**NOTE:** Concepts like AMM and Dynamic Pricing Oracle are not taken into account as it was asked to perform the exchange on the basis of a fixed exchange rate.
+
 ### Contract Structure
 
 **:computer:[Code](./contracts/SimpleDEX.sol)**
